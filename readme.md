@@ -122,14 +122,26 @@ Katkılarınızı memnuniyetle kabul ediyoruz! Lütfen önce bir konu açarak de
 
 ## Ekran Görüntüleri
 
-Ana ekran:
+### Ana ekran:
 ![Ana Ekran](resimler/image.png)
+
+### Şifreleme:
+![Sifreleme](resimler/sifrele.png)
+
+### Şifre Çözme:
+![Sifreleme](resimler/sifreCoz.png)
+
+### Sifre Gücü Belirleme:
+![Sifreleme](resimler/guc.png)
+
+### İletişim:
+![Sifreleme](resimler/iletişim.png)
 
 
 ## Yazarlar
 
-- **Osman Temel** - - [osmantemel](https://github.com/kullaniciadi)
-- **Hünkar Acar** - - [hunkaracar](https://github.com/kullaniciadi)
+- **Osman Temel** - - [osmantemel](https://github.com/osmantemel)
+- **Hünkar Acar** - - [hunkaracar](https://github.com/hunkaracar)
 
 ## Teşekkür
 
