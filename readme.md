@@ -63,7 +63,7 @@ Bu projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izl
 
 1. Bu projeyi klonlayın veya indirin:
    ```bash
-   git clone https://github.com/osmantemel/hack.git
+   git clone https://github.com/osmantemel/Samsun-hackathon-gelisen-cag.git
    cd SafeSurf-Çevrimiçi-Güvenlik-ve-Veri-Koruma-Sistemi
    cd frontend
    ```
@@ -123,7 +123,7 @@ curl -X POST http://127.0.0.1:5000/api/sts -H "Content-Type: application/json" -
 
 Katkılarınızı memnuniyetle kabul ediyoruz! Lütfen önce bir konu açarak değişikliklerinizi tartışın.
 
-1. Fork yapın (https://github.com/osmantemel/hack/fork)
+1. Fork yapın (https://github.com/osmantemel/Samsun-hackathon-gelisen-cag/fork)
 2. Bir dal oluşturun (`git checkout -b feature/AmazingFeature`)
 3. Değişikliklerinizi yapın (`git commit -m 'Add some AmazingFeature'`)
 4. Dalınıza ittirin (`git push origin feature/AmazingFeature`)
