@@ -1,0 +1,5 @@
+# .gitignore
+*.pkl
+*.csv
+rapor-ve-sunum/
+Trash/
