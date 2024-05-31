@@ -1,16 +1,15 @@
-Elbette, işte tüm içeriği tek bir `README.md` dosyası olarak hazırladım:
 
-```markdown
-# Saldırı Tespit Sistemi
+# Saldırı Tespit Sistemi , Özel Kriptoji algoritması ile veri şifreleme , Şifre Çözme Ve Şifre Gücü Belileme
 
-Bu proje, kullanıcıdan alınan URL veya IP adresine yönelik saldırı olup olmadığını tespit eden bir React uygulamasıdır. Uygulama, girilen adresi analiz eder ve olası saldırı türünü belirler.
-
+- Bu proje, kullanıcıdan alınan URL adresine yönelik saldırı olup olmadığını tespit eden bir  sayfa içerir. Uygulama, girilen adresi analiz eder ve olası saldırı türünü belirler.
+- Aynı zaman Özel Kriptoji algoritması ile metin şifreleme sayfası ve şifrelenmiş metini çözme sayfası bulunur
+- Ve Şifre Gücü belireme Aracına Sahip
 ## Özellikler
 
 - Kullanıcı dostu arayüz
-- URL veya IP adresi girişi
 - Analiz sonuçlarını görüntüleme
 - Yükleniyor animasyonu
+- Ve birçok estetik özellikler
 
 ## Kurulum
 
@@ -25,8 +24,9 @@ Bu projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izl
 
 1. Bu projeyi klonlayın veya indirin:
    ```bash
-   git clone https://github.com/kullaniciadi/saldiri-tespit-sistemi.git
-   cd saldiri-tespit-sistemi
+   git clone https://github.com/osmantemel/hack.git
+   cd SafeSurf-Çevrimiçi-Güvenlik-ve-Veri-Koruma-Sistemi
+   cd frontend
    ```
 
 2. Gerekli bağımlılıkları yükleyin:
@@ -42,12 +42,23 @@ Bu projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izl
    # veya
    yarn start
    ```
-
 4. Tarayıcınızda `http://localhost:3000` adresine giderek uygulamayı görüntüleyin.
 
-## Kullanım
+5. API dosyasına yerleşin
+   ```bash
+   cd ..
+   cd api
+   ```
 
-1. Uygulamayı başlattıktan sonra, URL veya IP adresini giriş alanına yazın.
+6. API çalıştırın
+   ```bash
+    python app.py
+   ```
+
+
+## Saldırı Tespit Sistemi Kullanımı
+
+1. Uygulamayı başlattıktan sonra, URL adresini giriş alanına yazın.
 2. `Analiz Et` butonuna tıklayın.
 3. Analiz sonuçlarını ve saldırı türünü ekranın altında görüntüleyin.
 
@@ -93,39 +104,33 @@ saldiri-tespit-sistemi/
 
 Katkılarınızı memnuniyetle kabul ediyoruz! Lütfen önce bir konu açarak değişikliklerinizi tartışın.
 
-1. Fork yapın (https://github.com/kullaniciadi/saldiri-tespit-sistemi/fork)
+1. Fork yapın (https://github.com/osmantemel/hack/fork)
 2. Bir dal oluşturun (`git checkout -b feature/AmazingFeature`)
 3. Değişikliklerinizi yapın (`git commit -m 'Add some AmazingFeature'`)
 4. Dalınıza ittirin (`git push origin feature/AmazingFeature`)
 5. Bir Pull Request açın
 
-## Lisans
 
-Bu proje MIT Lisansı altında lisanslanmıştır - daha fazla bilgi için `LICENSE` dosyasına bakın.
 
 ## Kullanılan Teknolojiler
 
 - React
 - Node.js
-- npm veya yarn
+- npm 
 - Flask (API için)
+- Python
 
 ## Ekran Görüntüleri
 
 Ana ekran:
-![Ana Ekran](screenshots/main_screen.png)
+![Ana Ekran](resimler/image.png)
 
-Analiz Sonuçları:
-![Analiz Sonuçları](screenshots/results.png)
 
 ## Yazarlar
 
-- **İsim Soyisim** - *İlk çalışma* - [Kullanıcı Adı](https://github.com/kullaniciadi)
+- **Osman Temel** - - [osmantemel](https://github.com/kullaniciadi)
+- **Hünkar Acar** - - [hunkaracar](https://github.com/kullaniciadi)
 
 ## Teşekkür
 
 Bu projede katkısı olan herkese teşekkürler!
-
-```
-
-Bu dosyayı `README.md` adıyla projenizin kök dizinine kaydedebilirsiniz.
