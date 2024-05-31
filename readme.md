@@ -11,6 +11,45 @@
 - Yükleniyor animasyonu
 - Ve birçok estetik özellikler
 
+## Proje Yapısı
+
+İşte düzenlenmiş plan ve açıklamaları:
+
+```plaintext
+Samsun-hackathon-gelisen-cag/
+├── models/
+│   ├── MODEL.ipynb
+│   ├── sifregucu.ipynb
+│   ├── Diger-ipynb/
+│   └── SifreGucuBelirleme/
+│       └── ...
+├── notlar/
+├── resimler/
+│   └── ...
+├── SafeSurf-Çevrimiçi-Güvenlik-ve-Veri-Koruma-Sistemi/
+│   ├── API/
+│   └── frontend/
+│       └── ...
+├── README.md
+└── ...
+```
+
+- `models/`: Modeller eğitilirken kullanılan tüm yöntemler ve ilgili dosyalar.
+  - `MODEL.ipynb`: Ana model dosyası.
+  - `sifregucu.ipynb`: Şifre gücü belirleme ile ilgili model dosyası.
+  - `Diger-ipynb/`: Diğer Jupyter Notebook dosyaları.
+  - `SifreGucuBelirleme/`: Şifre gücü belirleme ile ilgili ek dosyalar, daha farklı kullanılan yöntemler
+
+- `notlar/`: Proje ile ilgili notlar ve dokümanlar.
+- `resimler/`: Projede kullanılan resimler ve görseller.
+
+- `SafeSurf-Çevrimiçi-Güvenlik-ve-Veri-Koruma-Sistemi/`: Projenin ana klasörü.
+  - `API/`: API ile ilgili dosyalar.
+  - `frontend/`: React ile geliştirilen kullanıcı arayüzü dosyaları.
+
+- `README.md`: Projenin genel açıklamasını ve kurulum talimatlarını içeren dosya.
+```
+
 ## Kurulum
 
 Bu projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin.
@@ -78,44 +117,7 @@ Bu uygulama, arka planda çalışan bir API'yi kullanır. API, girilen URL veya 
 curl -X POST http://127.0.0.1:5000/api/sts -H "Content-Type: application/json" -d '{"url_or_ip": "example.com"}'
 ```
 
-## Proje Yapısı
 
-İşte düzenlenmiş plan ve açıklamaları:
-
-```plaintext
-Samsun-hackathon-gelisen-cag/
-├── models/
-│   ├── MODEL.ipynb
-│   ├── sifregucu.ipynb
-│   ├── Diger-ipynb/
-│   └── SifreGucuBelirleme/
-│       └── ...
-├── notlar/
-├── resimler/
-│   └── ...
-├── SafeSurf-Çevrimiçi-Güvenlik-ve-Veri-Koruma-Sistemi/
-│   ├── API/
-│   └── frontend/
-│       └── ...
-├── README.md
-└── ...
-```
-
-- `models/`: Modeller eğitilirken kullanılan tüm yöntemler ve ilgili dosyalar.
-  - `MODEL.ipynb`: Ana model dosyası.
-  - `sifregucu.ipynb`: Şifre gücü belirleme ile ilgili model dosyası.
-  - `Diger-ipynb/`: Diğer Jupyter Notebook dosyaları.
-  - `SifreGucuBelirleme/`: Şifre gücü belirleme ile ilgili ek dosyalar, daha farklı kullanılan yöntemler
-
-- `notlar/`: Proje ile ilgili notlar ve dokümanlar.
-- `resimler/`: Projede kullanılan resimler ve görseller.
-
-- `SafeSurf-Çevrimiçi-Güvenlik-ve-Veri-Koruma-Sistemi/`: Projenin ana klasörü.
-  - `API/`: API ile ilgili dosyalar.
-  - `frontend/`: React ile geliştirilen kullanıcı arayüzü dosyaları.
-
-- `README.md`: Projenin genel açıklamasını ve kurulum talimatlarını içeren dosya.
-```
 
 ## Katkıda Bulunma
 
