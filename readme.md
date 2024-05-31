@@ -80,25 +80,42 @@ curl -X POST http://127.0.0.1:5000/api/sts -H "Content-Type: application/json" -
 
 ## Proje Yapısı
 
+İşte düzenlenmiş plan ve açıklamaları:
+
 ```plaintext
-saldiri-tespit-sistemi/
-├── public/
-│   ├── index.html
+Samsun-hackathon-gelisen-cag/
+├── models/
+│   ├── MODEL.ipynb
+│   ├── sifregucu.ipynb
+│   ├── Diger-ipynb/
+│   └── SifreGucuBelirleme/
+│       └── ...
+├── notlar/
+├── resimler/
 │   └── ...
-├── src/
-│   ├── App.js
-│   ├── index.js
-│   └── Sts.js
-├── package.json
+├── SafeSurf-Çevrimiçi-Güvenlik-ve-Veri-Koruma-Sistemi/
+│   ├── API/
+│   └── frontend/
+│       └── ...
 ├── README.md
 └── ...
 ```
 
-- `public/`: Statik dosyalar ve ana HTML dosyası.
-- `src/`: React bileşenleri ve ana uygulama dosyaları.
-- `App.js`: Ana uygulama bileşeni.
-- `index.js`: Uygulamanın giriş noktası.
-- `Sts.js`: Saldırı Tespit Sistemi bileşeni.
+- `models/`: Modeller eğitilirken kullanılan tüm yöntemler ve ilgili dosyalar.
+  - `MODEL.ipynb`: Ana model dosyası.
+  - `sifregucu.ipynb`: Şifre gücü belirleme ile ilgili model dosyası.
+  - `Diger-ipynb/`: Diğer Jupyter Notebook dosyaları.
+  - `SifreGucuBelirleme/`: Şifre gücü belirleme ile ilgili ek dosyalar, daha farklı kullanılan yöntemler
+
+- `notlar/`: Proje ile ilgili notlar ve dokümanlar.
+- `resimler/`: Projede kullanılan resimler ve görseller.
+
+- `SafeSurf-Çevrimiçi-Güvenlik-ve-Veri-Koruma-Sistemi/`: Projenin ana klasörü.
+  - `API/`: API ile ilgili dosyalar.
+  - `frontend/`: React ile geliştirilen kullanıcı arayüzü dosyaları.
+
+- `README.md`: Projenin genel açıklamasını ve kurulum talimatlarını içeren dosya.
+```
 
 ## Katkıda Bulunma
 

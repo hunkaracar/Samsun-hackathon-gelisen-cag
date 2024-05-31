@@ -74,7 +74,6 @@ def sifrele(text,key):
     }
     alfabe = ['a', 'b', 'c', 'ç', 'd', 'e', 'f', 'g', 'ğ', 'h', 'ı', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'ö', 'p', 'r', 's', 'ş', 't', 'u', 'ü', 'v', 'y', 'z']
 
-
     metin=text
     anahtar = key
     anahtar_top=0

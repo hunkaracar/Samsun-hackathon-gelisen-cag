@@ -7,19 +7,19 @@ import sts1
 app = Flask(__name__)
 CORS(app)
 
-stored_encrypted_text = ""
-stored_key = ""
+test = ""
+tester = ""
 
 @app.route('/api/veri-sifreleme', methods=['POST'])
 def veri_sifreleme():
-    global stored_encrypted_text, stored_key
+    global test, tester
     try:
         data = request.get_json()
         print("veri_sifreleme", data)
         sifreli_metin, anahtar = sifreleme.text_read(data)
         metin = str(data['text'])
-        stored_encrypted_text = metin
-        stored_key = anahtar
+        test = metin
+        tester = anahtar
         return jsonify({'success': True, 'encrypted_data': sifreli_metin, 'anahtar': anahtar}), 200
     except Exception as e:
         print("Python except", e)
@@ -29,8 +29,8 @@ def veri_sifreleme():
 def sifre_cozme():
     try:
         print("sifre_cozme çağrıldı")
-        if stored_encrypted_text:
-            return jsonify({'decrypted_text': stored_encrypted_text, 'anahtar': stored_key}), 200
+        if test:
+            return jsonify({'decrypted_text': test, 'anahtar': tester}), 200
         else:
             return jsonify({'error': 'Şifrelenmiş metin bulunamadı'}), 404
     except Exception as e:

@@ -46,7 +46,7 @@ def prepare_tshark_command(ip_address):
     return [
         "tshark", 
         "-i", "eth0", 
-        "-a", "duration:20",  # 20 saniye süreyle dinle
+        "-a", "duration:20",  
         "-T", "fields",
         "-E", "header=y",
         "-E", "separator=,",
@@ -121,11 +121,9 @@ def print_predictions(predictions):
     print("Tahmin edilen değerler:")
     print(predictions)
     
-    # Tahmin edilen değerlerdeki tekrar sayılarını hesaplamak için düzleştirilmiş numpy dizisi oluşturun
     flat_predictions = np.array(predictions).flatten()
     counts = np.bincount(flat_predictions)
     
-    # En çok tekrar eden tahmini ve tekrar sayısını bul
     max_count = 0
     most_common_prediction = None
     for prediction, count in enumerate(counts):
