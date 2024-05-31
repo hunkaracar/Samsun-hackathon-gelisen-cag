@@ -119,6 +119,7 @@ def decrypt(encrypted_text,anahtar):
         print("Metin ve anahtar uzunlukları uyuşmuyor.")
         return
     
+    # Anahtar değerlerin X koordinat düzlemindeki değerlerini tutan dizi
     anahtar_values = []
     for char in new_anahtar:
         for key, value in x_anahtar.items():
@@ -154,6 +155,7 @@ def decrypt(encrypted_text,anahtar):
 
         print("Çözülen gerçek metin değerleri:", decrypted_real_values)
 
+        # Çözülen değerleri metin haline çevir
         decrypted_text = ''
         for value in decrypted_real_values:
             decrypted_text += y_metin.get(value, '')

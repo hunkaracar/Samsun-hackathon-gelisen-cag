@@ -97,7 +97,7 @@ def sifrele(text,key):
     else:
         new_anahtar = anahtar
         fark = len(metin) - len(anahtar)
-        new_anahtar = new_anahtar[:-2]
+        new_anahtar = new_anahtar[:fark]
 
     m1 = []
     a1 = []
