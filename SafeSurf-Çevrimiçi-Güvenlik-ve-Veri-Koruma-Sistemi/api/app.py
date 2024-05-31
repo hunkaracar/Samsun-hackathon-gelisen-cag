@@ -1,12 +1,12 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import sifreleme
-import sifreGucu  # şifre gücü hesaplama modülü
+import sifreGucu 
+import sts1
 
 app = Flask(__name__)
 CORS(app)
 
-# Küresel bir değişken oluştur
 stored_encrypted_text = ""
 stored_key = ""
 
@@ -16,9 +16,7 @@ def veri_sifreleme():
     try:
         data = request.get_json()
         print("veri_sifreleme", data)
-        # Burada gerçek şifreleme işlemi yapılır
         sifreli_metin, anahtar = sifreleme.text_read(data)
-        # Şifreli metin ve anahtarı sakla
         metin = str(data['text'])
         stored_encrypted_text = metin
         stored_key = anahtar
@@ -31,7 +29,6 @@ def veri_sifreleme():
 def sifre_cozme():
     try:
         print("sifre_cozme çağrıldı")
-        # Saklanan şifreli metni geri döndür
         if stored_encrypted_text:
             return jsonify({'decrypted_text': stored_encrypted_text, 'anahtar': stored_key}), 200
         else:
@@ -45,10 +42,9 @@ def sts():
     try:
         data = request.get_json()
         print("sts", data)
-        # Burada gerçek saldırı türü belirleme işlemi yapılır
-        attack_type = f'Simulated Attack Type for {data["url_or_ip"]}'
         metin=str(data['url_or_ip'])
         print(metin)
+        attack_type = sts1.text(metin)
         return jsonify({'attack_type': attack_type}), 200
     except Exception as e:
         print("Python except", e)
@@ -66,5 +62,5 @@ def sifre_gucu():
         print("Python except", e)
         return jsonify({'error': f'Hata: {str(e)}'}), 500
 
-if __name__ == '__main__':
+if __name__ == '_main_':
     app.run(debug=True)

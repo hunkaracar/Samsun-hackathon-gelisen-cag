@@ -8,7 +8,7 @@ import tempfile
 
 def text(url):
     print(url)
-    predict(url)
+    return predict(url)
 
 def predict(text):
     domain = text
@@ -25,10 +25,13 @@ def predict(text):
 
     predictions = predict_with_model(df, model)
 
-
-    print_predictions(predictions)
+    osman = print_predictions(predictions)
 
     delete_temp_file(temp_filename)
+
+    hack = hunkar(osman)
+    
+    return hack
 
 def resolve_domain_ip(domain):
     try:
@@ -117,10 +120,57 @@ def predict_with_model(df, model):
 def print_predictions(predictions):
     print("Tahmin edilen değerler:")
     print(predictions)
-    unique_predictions = np.unique(predictions)
-    for prediction in unique_predictions:
-        print(f"Saldırı Türü: {prediction}")
+    
+    # Tahmin edilen değerlerdeki tekrar sayılarını hesaplamak için düzleştirilmiş numpy dizisi oluşturun
+    flat_predictions = np.array(predictions).flatten()
+    counts = np.bincount(flat_predictions)
+    
+    # En çok tekrar eden tahmini ve tekrar sayısını bul
+    max_count = 0
+    most_common_prediction = None
+    for prediction, count in enumerate(counts):
+        if count > max_count:
+            max_count = count
+            most_common_prediction = prediction
+            
+    print(f"En çok tekrar eden Saldırı Türü: {most_common_prediction}")
+    return int(most_common_prediction)
+
+
 
 def delete_temp_file(filename):
     import os
     os.remove(filename)
+
+def hunkar(sayi):
+    attacks = [
+    "DDoS-TCP_Flood",
+    "DDoS-PSHACK_Flood",
+    "DDoS-SYN_Flood",
+    "DDoS-RSTFINFlood",
+    "Mirai-udpplain",
+    "Mirai-greip_flood",
+    "BenignTraffic",
+    "DDoS-UDP_Flood",
+    "DDoS-ICMP_Flood",
+    "DoS-SYN_Flood",
+    "Mirai-greeth_flood",
+    "DDoS-SynonymousIP_Flood",
+    "DoS-UDP_Flood",
+    "DDoS-ICMP_Fragmentation",
+    "Recon-OSScan",
+    "DoS-TCP_Flood",
+    "Recon-PortScan",
+    "MITM-ArpSpoofing",
+    "DDoS-UDP_Fragmentation",
+    "DoS-HTTP_Flood",
+    "DDoS-ACK_Fragmentation",
+    "DNS_Spoofing",
+    "VulnerabilityScan",
+    "Recon-HostDiscovery",
+    "DDoS-HTTP_Flood",
+    "DDoS-SlowLoris",
+    "DictionaryBruteForce"
+    ]
+    print(attacks[sayi - 1])
+    return attacks[sayi - 1]
